@@ -27,7 +27,15 @@ function data() {
 }
 
 function dniDoUrodzin() {
-    return '...'
+    let urodzinyDzien = 20;
+    let urodzinyMiesiac = 11;
+
+    let urodziny = new Date(2023,urodzinyMiesiac,urodzinyDzien);
+    let dzisiaj = new Date();
+
+    let wynik = Math.floor((urodziny - dzisiaj) / (1000*60*60*24)); // roznica w millisekundach
+
+    return 'Autor będzie mieć urodziny za ' + wynik + ' dni.';
 }
 
 function zegarek() {
