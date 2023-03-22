@@ -29,3 +29,15 @@ function data() {
 function dniDoUrodzin() {
     return '...'
 }
+
+function zegarek() {
+    let data = new Date();
+    let godzina = data.getHours();
+    let minuta = data.getMinutes();
+    let sekunda = data.getSeconds();
+
+    if (minuta<10) minuta="0"+minuta;
+    if (sekunda<10) sekunda="0"+sekunda;
+    let stopka = document.getElementById("stopka");
+    stopka.innerHTML="&copy;2023 WW | "+godzina+":"+minuta+":"+sekunda;
+}
